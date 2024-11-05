@@ -20,8 +20,15 @@ pip install wallycore
 
 Or generate a self signed certificate
 
+
 ```console
 openssl req -new -x509 -keyout server.pem -out server.pem -days 3650 -nodes
+```
+
+### Or - Docker compose
+
+```console
+docker compose up
 ```
 
 ### Start SimpleJadePinServer.py
