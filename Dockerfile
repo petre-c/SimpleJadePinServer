@@ -10,7 +10,7 @@ COPY . /app
 # Install dependencies
 RUN pip install wallycore
 
-# Generate a self-signed certificate (optional)
+# Generate a self-signed certificate
 RUN openssl req -new -x509 -keyout server.pem -out server.pem -days 3650 -nodes -subj "/CN=localhost"
 
 # Copy the entrypoint script into the container
