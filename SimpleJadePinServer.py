@@ -268,7 +268,7 @@ if __name__ == "__main__":
     STATIC_SERVER_PRIVATE_KEY, STATIC_SERVER_PUBLIC_KEY = get_static_server_key_pair()
     STATIC_SERVER_AES_PIN_DATA = wally.hmac_sha256(STATIC_SERVER_PRIVATE_KEY, b'pin_data')
 
-    server.socket = ssl.wrap_socket(server.socket, certfile='./server.pem', server_side=True)
+    server.socket = ssl.wrap_socket(server.socket, certfile='./key_data/server.pem', server_side=True)
 
     try:
         server.serve_forever()
